@@ -10,7 +10,6 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 
 		GreetingWebClient gwc = new GreetingWebClient();
-		System.out.println(gwc.getResult());
-		System.out.println("This is directly on the app");
+		System.out.println("\n\n====================\nYou have successfully compiled everything correctly and got your own Spring Boot server running! \n\nGo ahead modify TaskList.txt and take a look at localhost:8080/Tasks\n====================\n");
 	}
 }
