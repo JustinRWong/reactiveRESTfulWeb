@@ -14,7 +14,7 @@ import java.io.IOException;
 @Component
 public class GreetingHandler {
 	public static final String bods = "Justin's Local To Do List: \n\n 1. Email Vicky Howell \n 2. Catch up on lecture? \n 3. EE overview";
-	String fileN = "/Users/JustinRWong/Desktop/PersonalWebsite-2/ReactiveRESTfulWeb/src/main/java/hello/test.txt";
+	String fileN = "./TaskList.txt";
 
 	public Mono<ServerResponse> hello(ServerRequest request) {
 		String content = reader(fileN);
