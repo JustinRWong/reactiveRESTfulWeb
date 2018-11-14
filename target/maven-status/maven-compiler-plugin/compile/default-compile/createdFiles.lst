@@ -1,3 +1,5 @@
+hello/WebSecurityConfig.class
+hello/MvcConfig.class
 hello/GreetingHandler.class
 hello/GreetingRouter.class
 hello/Application.class

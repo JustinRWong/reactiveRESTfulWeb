@@ -1,5 +1,5 @@
-		Your Local To Do List:			
-			1. Task 1 is over	
- 			2. Take out the trash	
-			3. CS overview	
-			4. Cool Stuff	
+    Justin's Local To Do List:
+		1. Email Vicky Howell
+ 		2. Catch up on ee lecture
+		3. CS overview
+		4. Continue working on spring boot app

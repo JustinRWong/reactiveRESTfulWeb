@@ -1,28 +1,32 @@
 -------------------------------------------------------------------------------
 Test set: hello.GreetingRouterTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.691 s <<< FAILURE! - in hello.GreetingRouterTest
-testHello(hello.GreetingRouterTest)  Time elapsed: 0.269 s  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.851 s <<< FAILURE! - in hello.GreetingRouterTest
+testHello(hello.GreetingRouterTest)  Time elapsed: 0.439 s  <<< FAILURE!
 java.lang.AssertionError: 
-Response body expected:<Hello, Spring!> but was:<Hello, Spring! 
-This is Justin's first Spring server running>
+Status expected:<200> but was:<302>
 
-> GET http://localhost:64729/hello
+> GET http://localhost:55412/hello
 > WebTestClient-Request-Id: [1]
 > Accept: [text/plain]
 
 No content
 
-< 200 OK
-< Content-Type: [text/plain]
-< Content-Length: [60]
+< 302 Found
+< Set-Cookie: [JSESSIONID=1075657CCEC5230E015426EFC581F7D8; Path=/; HttpOnly]
+< X-Content-Type-Options: [nosniff]
+< X-XSS-Protection: [1; mode=block]
+< Cache-Control: [no-cache, no-store, max-age=0, must-revalidate]
+< Pragma: [no-cache]
+< Expires: [0]
+< X-Frame-Options: [DENY]
+< Location: [http://localhost:55412/login]
+< Content-Length: [0]
+< Date: [Wed, 14 Nov 2018 11:30:55 GMT]
 
-Hello, Spring! 
-This is Justin's first Spring server running
+Content not available yet
 
-	at hello.GreetingRouterTest.testHello(GreetingRouterTest.java:32)
-Caused by: java.lang.AssertionError: 
-Response body expected:<Hello, Spring!> but was:<Hello, Spring! 
-This is Justin's first Spring server running>
-	at hello.GreetingRouterTest.testHello(GreetingRouterTest.java:32)
+	at hello.GreetingRouterTest.testHello(GreetingRouterTest.java:31)
+Caused by: java.lang.AssertionError: Status expected:<200> but was:<302>
+	at hello.GreetingRouterTest.testHello(GreetingRouterTest.java:31)
 

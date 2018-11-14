@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Hello World!</title>
+    </head>
+
+    <body>
+        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+
+        <p>
+        <h3>Task List</h3>
+        <textarea rows="10" cols="100" id="myList">
+                Here you can write some text to display in the textarea as the default text
+            </textarea>
+        <button onclick="myFunction()">Save your Tasks</button>
+        <button onclick="toEdit()">Edit List</button>
+        <script>
+            function myFunction() {
+                document.getElementById("myList").readOnly = true;
+            }
+            function toEdit() {
+                document.getElementById("myList").readOnly = false;
+            }
+        </script>
+
+
+        <form th:action="@{/home}">
+            <input type="submit" value="Go back Home"/>
+        </form>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
